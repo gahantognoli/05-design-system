@@ -1,0 +1,22 @@
+{
+  "name": "@gab-ignite-ui/tokens",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "eslint src/**/*ts* --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@gab-ignite-ui/ts-config": "*",
+    "@gab-ignite-ui/eslint-config": "*",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2"
+  }
+}
