@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "@gab-ignite-ui/eslint-config",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended"
+  ]
+}
