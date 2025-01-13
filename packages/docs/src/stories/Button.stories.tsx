@@ -1,17 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '@gab-ignite-ui/react'
+import type { Meta, StoryObj } from "@storybook/react";
+import { Button, ButtonProps } from "@gab-ignite-ui/react";
 
 const meta = {
-  title: 'Example/Button',
+  title: "Form/Button",
   component: Button,
-  tags: ['autodocs'],
-  parameters: {
-    layout: 'fullscreen',
+  args: {
+    children: "Enviar",
   },
-} satisfies Meta<typeof Button>;
+} as Meta<ButtonProps>;
 
 export default meta;
 
-type Story = StoryObj<typeof meta>;
+export const Primary: StoryObj<ButtonProps> = {};
 
-export const ButtonEx: Story = {};
+export const Big: StoryObj<ButtonProps> = {
+  args: {
+    size: 'small'
+  }
+};
