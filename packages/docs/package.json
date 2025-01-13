@@ -1,18 +1,27 @@
 {
-  "name": "@gab-ignite-ui/docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "docs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "sb dev",
-    "build": "sb build"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
+    "@gab-ignite-ui/react": "*",
+    "@gab-ignite-ui/tokens": "*",
+    "@gab-ignite-ui/ts-config": "*",
+    "@gab-ignite-ui/eslint-config": "*",
     "@chromatic-com/storybook": "^3.2.3",
+    "@eslint/js": "^9.17.0",
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-onboarding": "^8.4.7",
@@ -20,16 +29,22 @@
     "@storybook/react": "^8.4.7",
     "@storybook/react-vite": "^8.4.7",
     "@storybook/test": "^8.4.7",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
     "eslint-plugin-storybook": "^0.11.2",
-    "prop-types": "^15.8.1",
-    "storybook": "^8.4.7"
+    "globals": "^15.14.0",
+    "storybook": "^8.4.7",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.5"
   },
-  "dependencies": {
-    "@gab-ignite-ui/eslint-config": "*",
-    "@gab-ignite-ui/react": "*",
-    "@gab-ignite-ui/tokens": "*",
-    "@gab-ignite-ui/ts-config": "*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
   }
 }
