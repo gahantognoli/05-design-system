@@ -5,8 +5,8 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.tsx --format esm,cjs --dts --external react --watch",
+    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
     "lint": "eslint src/**/*ts* --fix"
   },
   "keywords": [],
@@ -14,10 +14,16 @@
   "license": "MIT",
   "description": "",
   "devDependencies": {
-    "@gab-ignite-ui/ts-config": "*",
     "@gab-ignite-ui/eslint-config": "*",
     "@gab-ignite-ui/tokens": "*",
+    "@gab-ignite-ui/ts-config": "*",
+    "@types/react": "^19.0.5",
+    "@types/react-dom": "^19.0.3",
+    "react": "^19.0.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }
