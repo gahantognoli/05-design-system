@@ -2,6 +2,7 @@
   "name": "@gab-ignite-ui/eslint-config",
   "main": "index.js",
   "license": "MIT",
+  "version": "3.0.0",
   "private": true,
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
